@@ -19,6 +19,7 @@ class Tst1Page extends Page
     public ?array $data = ['toto']; 
     public ?array $data1 = ['toto1']; 
     public ?array $data2 = null; 
+    
 
     public function getTst3(){
         $tst3 = Tst3::all()->toArray();
