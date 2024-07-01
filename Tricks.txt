@@ -1,0 +1,32 @@
+->afterStateUpdated(fn (Set $set, Get $get) => $set('course_fee', Course::find($get('course_id'))->course_fee))
+
+->dehydrated()
+->hiddenOn('edit')
+// ->disabled(fn ($record) => !is_null($record))
+->disabledOn('edit')
+TextInput::make('username')
+    ->live(onBlur: true)
+TextInput::make('username')
+    ->live(debounce: 500)
+
+salvar dados em mais de uma tabela
+ ver o Repeater
+
+->reactive()
+
+
+CustomTextInput::make('name')
+->reactive()
+->required()
+->minLength(2)
+->maxLength(255)
+->characterLimit(255)
+->unique(table: BannerCategory::class)
+->afterStateUpdated(function (Closure $set, $state) {
+$set('slug', Str::slug($state));
+})->autofocus()
+->unique(ignoreRecord: true)
+->placeholder('Enter name of banner category'),
+CustomTextInput::make('slug')
+->maxLength(255)
+->characterLimit(255),
