@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::table('tst2s', function(Blueprint $table){
             $table->foreignId('tst1_id')->after('id')->references('id')->on('tst1s');
-            // $table->integer('tst1_id');
-            // $table->foreignId('tst1_id')->references('id')->on('tst1s');
+            // $table->integer('tst1_id')->nullable();
+            // $table->foreignId('tst1_id')->references('id')->on('tst1s')->nullable();
         });
     }
 
